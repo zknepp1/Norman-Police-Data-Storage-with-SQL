@@ -1,5 +1,5 @@
 def main():
-  #url1 = "https://www.normanok.gov/sites/default/files/documents/2023-02/2023-01-31_daily_incident_summary.pdf"
+  #url = "https://www.normanok.gov/sites/default/files/documents/2023-02/2023-01-31_daily_incident_summary.pdf"
   url = input('Please enter the url to the pdf\n')
   u1 = get_pdf(url)
 
@@ -8,4 +8,8 @@ def main():
   
   store_data_from_pdf(u1, con)
 
-  print_table(con)
+  status(con)
+
+
+if __name__ == "__main__":
+  main()
