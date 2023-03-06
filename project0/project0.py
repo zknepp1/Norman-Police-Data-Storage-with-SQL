@@ -127,9 +127,6 @@ def store_data_from_pdf(pdf, con):
 
 
 
-
-
-
 #This function prints the contents in the sql database
 def print_table(con):
   cur = con.cursor()
@@ -142,7 +139,15 @@ def print_table(con):
 
 
 
-
+#This function prints out the frequencies of nature
+def status(con):
+  cur = con.cursor()
+  res = cur.execute("SELECT nature, count(*) as frequency FROM incidents GROUP BY nature ORDER BY count(*) desc")
+  rows = res.fetchall()
+  k = len(rows)
+  
+  for i in range(0,k):
+    print(rows[i][0], "|", rows[i][1])
 
 
 
