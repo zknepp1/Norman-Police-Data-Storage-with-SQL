@@ -1,3 +1,5 @@
+import project0.py
+
 def main():
   #url = "https://www.normanok.gov/sites/default/files/documents/2023-02/2023-01-31_daily_incident_summary.pdf"
   url = input('Please enter the url to the pdf\n')
