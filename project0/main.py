@@ -1,7 +1,7 @@
 def main():
-  url1 = "https://www.normanok.gov/sites/default/files/documents/2023-02/2023-01-31_daily_incident_summary.pdf"
-
-  u1 = get_pdf(url1)
+  #url1 = "https://www.normanok.gov/sites/default/files/documents/2023-02/2023-01-31_daily_incident_summary.pdf"
+  url = input('Please enter the url to the pdf\n')
+  u1 = get_pdf(url)
 
   con = create_table()
   clear_table(con)
