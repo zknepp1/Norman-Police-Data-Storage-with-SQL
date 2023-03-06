@@ -110,7 +110,7 @@ def store_data_from_pdf(pdf, con):
 
       
       add_to_table(datetime, incident_num, location, nature, ori, con)
-      print("Added to table: ", i)
+      #print("Added to table: ", i)
       s = s + 1
     except:
       print("An exeption occured with: ", i)
