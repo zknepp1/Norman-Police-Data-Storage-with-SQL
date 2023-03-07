@@ -78,7 +78,7 @@ def store_data_from_pdf(pdf, con):
   regex_datetime = r"((\d{1})\/(\d{1})\/(\d{4}) ([0-9]+):(\d{2}))|((\d{1})\/(\d{2})\/(\d{4}) ([0-9]+):(\d{2}))"
   regex_incident_num = r"(\d{4})-(\d{8})"
   regex_location = r"( \d{1,5}. ([A-Z]|[1-9])+ [A-Z]+ (([A-Z]+)\b)?)|( [A-Z]+ [A-Z]+ [A-Z]+ \/ [A-Z]+ [A-Z]+ [A-Z]+)|( [A-Z]+ [A-Z]+ \/ [A-Z]+ [A-Z]+)|([A-Z] [A-Z]+ [A-Z]+ \/ \d+[A-Z]+ [A-Z]+ [A-Z]+)|([1-9]+[A-Z]+ [A-Z]+ [A-Z]+ \/ [A-Z]+ \d)|(\d\d\d\d [A-Z]+ \d+\w+ \w+)|([A-Z] [A-Z]+ [A-Z]+ \d [A-Z]+ \/ [A-Z] [A-Z]+ [A-Z]+)|([A-Z]+ [A-Z]+ \/ \d+[A-Z]+ [A-Z]+ [A-Z]+)|(\d{4} \d{3}[A-Z]+ [A-Z]+ [A-Z]+)|(\d+ [A-Z] [A-Z]\d\d)"
-  regex_nature = r"([A-Z][a-z]+\/[A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+\/[A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+)|((MVA) [A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+)"
+  regex_nature = r"([A-Z][a-z]+ [A-Z][a-z]+\/[A-Z][a-z]+)|([A-Z][a-z]+ \/ [A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [a-z]+ [A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+\/[A-Z][a-z]+ [A-Z][a-z]+\/[A-Z][a-z]+)|([A-Z][a-z]+\/[A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+\/[A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+ [A-Z][a-z]+)|((MVA) [A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+ [A-Z][a-z]+)|([A-Z][a-z]+)"
   regex_ori = r"(EMSSTAT)|([A-Z][A-Z]\d\d\d\d\d\d\d)|(14005)"
 
   count = 0
