@@ -1,13 +1,16 @@
 from project0 import get_pdf, create_table, add_to_table, clear_table, store_data_from_pdf, print_table, status
+import sys
 
 def main():
-  #url = "https://www.normanok.gov/sites/default/files/documents/2023-02/2023-01-31_daily_incident_summary.pdf"
-  url = input('Please enter the url to the pdf\n')
+
+  url = sys.argv[-1]
+
   u1 = get_pdf(url)
 
   con = create_table()
+
   clear_table(con)
-  
+
   store_data_from_pdf(u1, con)
 
   status(con)
