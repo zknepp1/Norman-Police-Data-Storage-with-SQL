@@ -10,7 +10,14 @@ PIPENV INSTALL PROJECT0
 
 
 #  HOW TO RUN
-PIPENV RUN … VIDEO
+1. RUN "git clone https://github.com/zknepp1/cs5293sp23-project0.git" TO CLONE MY REPO FROM GITHUB
+2. RUN "cd cs5293sp23-project0" TO MOVE INTO REPO
+3. RUN "pipenv run python project0/main.py --incidents <URL TO PDF>"
+4. EXAMPLE: "pipenv run python project0/main.py --incidents https://www.normanok.gov/sites/default/files/documents/2023-02/2023-02-11_daily_incident_summary.pdf"
+
+VIDEO INSTRUCTIONS
+https://user-images.githubusercontent.com/41703755/223562976-e733f942-d9bd-40d7-ae3d-0c4ff58b0b44.mp4
+
 
 
 # FUNCTIONS
