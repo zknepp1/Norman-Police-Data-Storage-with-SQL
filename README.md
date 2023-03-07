@@ -1,36 +1,47 @@
-# cs5293sp23-project0
-Name: Zachary Knepp
+# CS5293SP23-PROJECT0
+NAME: ZACHARY KNEPP
 
-#  Project Description
-The purpose of this program is to go to the Norman Police Website (https://www.normanok.gov/public-safety/police-department/crime-prevention-data/department-activity-reports), process the Daily Incident Summary PDFs, store the data in a sql database, and print out the frequency of nature of incident in descending order. 
-
-
-# How to install
-pipenv install
-
-#  How to run
-pipenv run … video
-
-# Functions
-project0.py \
-create_table() - This function makes a database called normanpolice.db, and returns the connection to the database
-
-get_pdf(url) - This function takes a url parameter to a pdf, retrieves the pdf, splits the pdf by line, stores the lines in a list, and returns the list of lines.
-
-store_data_from_pdf(pdf, con) - This function takes the list of lines from get_pdf(url) and database connection as parameters, uses regular expression to extract the text data from the lines, and inserts the data into the database using the add_to_table(datetime, incident_num, location, nature, ori, con) function.
-
-add_to_table(datetime, incident_num, location, nature, ori, con) - Takes datetime, incident_num, location, nature, ori, and database connection as parameters. Stores datetime, incident_num, location, nature, and ori in the database, and reports how many successes/failures.
-
-clear_table(con) - Takes the database connection and clears the table.
-
-print_table(con) - Takes the database connection and prints the table.
-
-status(con) - Takes the database connection, counts the frequency of the nature column, and orders the nature column in descending order of by frequency.
-
-# Database Development
+# PROJECT DESCRIPTION
+THE PURPOSE OF THIS PROGRAM IS TO GO TO THE NORMAN POLICE WEBSITE (HTTPS://WWW.NORMANOK.GOV/PUBLIC-SAFETY/POLICE-DEPARTMENT/CRIME-PREVENTION-DATA/DEPARTMENT-ACTIVITY-REPORTS), PROCESS THE DAILY INCIDENT SUMMARY PDFS, STORE THE DATA IN A SQL DATABASE, AND PRINT OUT THE FREQUENCY OF NATURE OF INCIDENT IN DESCENDING ORDER. 
 
 
-# Bugs and Assumptions
+# HOW TO INSTALL
+PIPENV INSTALL PROJECT0
 
+
+#  HOW TO RUN
+PIPENV RUN … VIDEO
+
+
+# FUNCTIONS
+PROJECT0.PY \
+CREATE_TABLE() - THIS FUNCTION MAKES A DATABASE CALLED NORMANPOLICE.DB, AND RETURNS THE CONNECTION TO THE DATABASE
+
+GET_PDF(URL) - THIS FUNCTION TAKES A URL PARAMETER TO A PDF, RETRIEVES THE PDF, SPLITS THE PDF BY LINE, STORES THE LINES IN A LIST, AND RETURNS THE LIST OF LINES.
+
+STORE_DATA_FROM_PDF(PDF, CON) - THIS FUNCTION TAKES THE LIST OF LINES FROM GET_PDF(URL) AND DATABASE CONNECTION AS PARAMETERS, USES REGULAR EXPRESSION TO EXTRACT THE TEXT DATA FROM THE LINES, AND INSERTS THE DATA INTO THE DATABASE USING THE ADD_TO_TABLE(DATETIME, INCIDENT_NUM, LOCATION, NATURE, ORI, CON) FUNCTION.
+
+ADD_TO_TABLE(DATETIME, INCIDENT_NUM, LOCATION, NATURE, ORI, CON) - TAKES DATETIME, INCIDENT_NUM, LOCATION, NATURE, ORI, AND DATABASE CONNECTION AS PARAMETERS. STORES DATETIME, INCIDENT_NUM, LOCATION, NATURE, AND ORI IN THE DATABASE, AND REPORTS HOW MANY SUCCESSES/FAILURES.
+
+CLEAR_TABLE(CON) - TAKES THE DATABASE CONNECTION AND CLEARS THE TABLE.
+
+PRINT_TABLE(CON) - TAKES THE DATABASE CONNECTION AND PRINTS THE TABLE.
+
+STATUS(CON) - TAKES THE DATABASE CONNECTION, COUNTS THE FREQUENCY OF THE NATURE COLUMN, AND ORDERS THE NATURE COLUMN IN DESCENDING ORDER BY FREQUENCY.
+
+
+
+# DATABASE DEVELOPMENT
+DATABASE BUILT USING SQLITE3 POACKAGE FOR PYTHON.
+
+# BUGS AND ASSUMPTIONS
+ASSUMPTIONS MADE
+1. ALL OF DAILY INCIDENT SUMMARIES ARE ASSUMED TO BE STRUCTURED THE SAME.
+2. THE USER WILL ENTER A CORRECT URL.
+3. THE PROGRAM WILL EXECUTE IN UNDER 60 SECONDS, IF NOT THE DB CONNECTION WILL TIMEOUT.
+
+POTENTIAL BUGS
+1. PROGRAM WILL CRASH IF A INCORRECT URL IS ENTERED.
+2. MY REGULAR EXPRESSIONS MAY NOT WORK FOR EVERY SINGLE INCIDENT AND ADDRESS. I DID MY BEST TO OPTIMIZE THE REGULAR EXPRESSIONS FOR ANY INPUT; HOWEVER IF MY REGULAR EXPRESSION DOES NOT FIND THE DATA, NULL IS ASSUMED.
 
 
