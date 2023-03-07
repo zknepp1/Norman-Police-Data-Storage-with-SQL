@@ -1,4 +1,13 @@
-
+import urllib
+import urllib.request
+from urllib.parse import urlparse
+import os
+import requests
+import re
+import sqlite3
+import io
+import PyPDF2
+import numpy as np
 
 # This function creates the sql table to store the data in
 def create_table():

@@ -1,4 +1,4 @@
-import project0.py
+from project0 import get_pdf, create_table, add_to_table, clear_table, store_data_from_pdf, print_table, status
 
 def main():
   #url = "https://www.normanok.gov/sites/default/files/documents/2023-02/2023-01-31_daily_incident_summary.pdf"
